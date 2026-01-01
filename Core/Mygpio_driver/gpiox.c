@@ -1,26 +1,4 @@
 #include "gpiox.h"
-/////////////////////////////////////////////////////////////////////////////
-//defines for MODER
-#define GPIOx_MODER_INPUT 	0b00
-#define GPIOx_MODER_OUTPUT 	0b01
-#define GPIOx_MODER_AF 		0b10
-#define GPIOx_MODER_ANALOG 	0b11
-
-//defines for OTYPER
-#define GPIOx_OTYPER_PP 0b00
-#define GPIOx_OTYPER_OD 0b01
-
-//defines for OSPEEDR
-#define GPIOx_OSPEEDR_LOW_SP 	0b00
-#define GPIOx_OSPEEDR_MED_SP 	0b01
-#define GPIOx_OSPEEDR_FAST_SP 	0b10
-#define GPIOx_OSPEEDR_HIGH_SP 	0b11
-
-//defines for PUPDR
-#define GPIOx_PUPDR_NONE  	0b00
-#define GPIOx_PUPDR_UP  	0b01
-#define GPIOx_PUPDR_DOWN  	0b10
-
 
 //////////////////////////////////////////////////////////////////////////////
 

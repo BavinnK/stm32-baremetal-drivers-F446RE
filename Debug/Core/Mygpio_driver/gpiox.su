@@ -1,0 +1,2 @@
+../Core/Mygpio_driver/gpiox.c:5:20:port_init	16	static
+../Core/Mygpio_driver/gpiox.c:10:6:gpio_init	16	static

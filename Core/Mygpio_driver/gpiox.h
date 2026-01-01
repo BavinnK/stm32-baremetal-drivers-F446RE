@@ -29,14 +29,14 @@ typedef enum {
 } gpio_pull_t;
 typedef struct {
 	uint8_t PINx;
-	uint8_t MODERx;
-	uint8_t OTYPERx;
-	uint8_t OSPEEDRx;
-	uint8_t PUPDRx;
+	gpio_mode_t MODERx;
+	gpio_otype_t OTYPERx;
+	gpio_speed_t OSPEEDRx;
+	gpio_pull_t PUPDRx;
 } gpio_set_up;
-
-void gpio_init(GPIO_TypeDef *port, gpio_set_up *ptr);
 static inline void port_init(GPIO_TypeDef *ptr);
+void gpio_init(GPIO_TypeDef *port, gpio_set_up *ptr);
+
 void gpio_set(GPIO_TypeDef *port,uint8_t pin);
 void gpio_reset(GPIO_TypeDef *port,uint8_t pin);
 #endif

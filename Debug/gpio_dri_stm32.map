@@ -325,6 +325,52 @@ Discarded input sections
  .debug_frame   0x00000000       0x58 ./Core/DRIVERS/usart/myUSART2.o
  .ARM.attributes
                 0x00000000       0x34 ./Core/DRIVERS/usart/myUSART2.o
+ .group         0x00000000        0xc ./Core/EXAMPLE_DRIVERS/adc_example.o
+ .group         0x00000000        0xc ./Core/EXAMPLE_DRIVERS/adc_example.o
+ .group         0x00000000        0xc ./Core/EXAMPLE_DRIVERS/adc_example.o
+ .group         0x00000000        0xc ./Core/EXAMPLE_DRIVERS/adc_example.o
+ .group         0x00000000        0xc ./Core/EXAMPLE_DRIVERS/adc_example.o
+ .group         0x00000000        0xc ./Core/EXAMPLE_DRIVERS/adc_example.o
+ .group         0x00000000        0xc ./Core/EXAMPLE_DRIVERS/adc_example.o
+ .group         0x00000000        0xc ./Core/EXAMPLE_DRIVERS/adc_example.o
+ .group         0x00000000        0xc ./Core/EXAMPLE_DRIVERS/adc_example.o
+ .group         0x00000000        0xc ./Core/EXAMPLE_DRIVERS/adc_example.o
+ .group         0x00000000        0xc ./Core/EXAMPLE_DRIVERS/adc_example.o
+ .group         0x00000000        0xc ./Core/EXAMPLE_DRIVERS/adc_example.o
+ .group         0x00000000        0xc ./Core/EXAMPLE_DRIVERS/adc_example.o
+ .group         0x00000000        0xc ./Core/EXAMPLE_DRIVERS/adc_example.o
+ .text          0x00000000        0x0 ./Core/EXAMPLE_DRIVERS/adc_example.o
+ .data          0x00000000        0x0 ./Core/EXAMPLE_DRIVERS/adc_example.o
+ .bss           0x00000000        0x0 ./Core/EXAMPLE_DRIVERS/adc_example.o
+ .text.example_main
+                0x00000000       0x30 ./Core/EXAMPLE_DRIVERS/adc_example.o
+ .debug_info    0x00000000      0x2ea ./Core/EXAMPLE_DRIVERS/adc_example.o
+ .debug_abbrev  0x00000000      0x106 ./Core/EXAMPLE_DRIVERS/adc_example.o
+ .debug_aranges
+                0x00000000       0x20 ./Core/EXAMPLE_DRIVERS/adc_example.o
+ .debug_rnglists
+                0x00000000       0x13 ./Core/EXAMPLE_DRIVERS/adc_example.o
+ .debug_macro   0x00000000       0xd3 ./Core/EXAMPLE_DRIVERS/adc_example.o
+ .debug_macro   0x00000000      0xad8 ./Core/EXAMPLE_DRIVERS/adc_example.o
+ .debug_macro   0x00000000       0x22 ./Core/EXAMPLE_DRIVERS/adc_example.o
+ .debug_macro   0x00000000       0x8e ./Core/EXAMPLE_DRIVERS/adc_example.o
+ .debug_macro   0x00000000       0x51 ./Core/EXAMPLE_DRIVERS/adc_example.o
+ .debug_macro   0x00000000      0x103 ./Core/EXAMPLE_DRIVERS/adc_example.o
+ .debug_macro   0x00000000       0x6a ./Core/EXAMPLE_DRIVERS/adc_example.o
+ .debug_macro   0x00000000      0x1df ./Core/EXAMPLE_DRIVERS/adc_example.o
+ .debug_macro   0x00000000       0x28 ./Core/EXAMPLE_DRIVERS/adc_example.o
+ .debug_macro   0x00000000       0x1c ./Core/EXAMPLE_DRIVERS/adc_example.o
+ .debug_macro   0x00000000       0x22 ./Core/EXAMPLE_DRIVERS/adc_example.o
+ .debug_macro   0x00000000       0xfb ./Core/EXAMPLE_DRIVERS/adc_example.o
+ .debug_macro   0x00000000     0x1011 ./Core/EXAMPLE_DRIVERS/adc_example.o
+ .debug_macro   0x00000000      0x11f ./Core/EXAMPLE_DRIVERS/adc_example.o
+ .debug_macro   0x00000000    0x16749 ./Core/EXAMPLE_DRIVERS/adc_example.o
+ .debug_line    0x00000000      0x650 ./Core/EXAMPLE_DRIVERS/adc_example.o
+ .debug_str     0x00000000    0x8ab94 ./Core/EXAMPLE_DRIVERS/adc_example.o
+ .comment       0x00000000       0x44 ./Core/EXAMPLE_DRIVERS/adc_example.o
+ .debug_frame   0x00000000       0x30 ./Core/EXAMPLE_DRIVERS/adc_example.o
+ .ARM.attributes
+                0x00000000       0x34 ./Core/EXAMPLE_DRIVERS/adc_example.o
  .group         0x00000000        0xc ./Core/Src/main.o
  .group         0x00000000        0xc ./Core/Src/main.o
  .group         0x00000000        0xc ./Core/Src/main.o
@@ -2487,6 +2533,7 @@ LOAD ./Core/DRIVERS/hcsr04/MyHcsr04.o
 LOAD ./Core/DRIVERS/pwm/MyPwm.o
 LOAD ./Core/DRIVERS/spi/MySpi.o
 LOAD ./Core/DRIVERS/usart/myUSART2.o
+LOAD ./Core/EXAMPLE_DRIVERS/adc_example.o
 LOAD ./Core/Src/main.o
 LOAD ./Core/Src/stm32f4xx_hal_msp.o
 LOAD ./Core/Src/stm32f4xx_it.o

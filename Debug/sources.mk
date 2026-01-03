@@ -28,6 +28,7 @@ Core/DRIVERS/hcsr04 \
 Core/DRIVERS/pwm \
 Core/DRIVERS/spi \
 Core/DRIVERS/usart \
+Core/EXAMPLE_DRIVERS \
 Core/Src \
 Core/Startup \
 Drivers/STM32F4xx_HAL_Driver/Src \

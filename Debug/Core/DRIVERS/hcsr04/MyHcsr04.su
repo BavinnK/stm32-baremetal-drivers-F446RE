@@ -1,0 +1,5 @@
+../Core/DRIVERS/hcsr04/MyHcsr04.c:8:6:hcsr04_init	4	static
+../Core/DRIVERS/hcsr04/MyHcsr04.c:39:6:TIM1_CC_IRQHandler	4	static
+../Core/DRIVERS/hcsr04/MyHcsr04.c:71:6:delay_us_hc	24	static,ignoring_inline_asm
+../Core/DRIVERS/hcsr04/MyHcsr04.c:76:6:hcsr04_trig_hc	8	static
+../Core/DRIVERS/hcsr04/MyHcsr04.c:81:11:hcsr04_get_pulse_width	4	static

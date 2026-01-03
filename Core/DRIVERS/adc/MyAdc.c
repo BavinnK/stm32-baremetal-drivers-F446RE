@@ -1,51 +1,89 @@
 #include <MYadc.h>
-#include "stm32f446xx.h"
 
-void adc_init(void) {
-	// PA0 for the LM35 ADC1 IN0
-	// PA1 for the pot  ADC1 IN1
+static inline GPIO_TypeDef* channel_setup(uint8_t port){//inline helper func for the GPIO port
+	if(port>=0 && port<=7){
+		return GPIOA;
+	}
+	else if(port>=8&&port<=9){
+		return GPIOB;
+	}
+	else if(port>=10&&port<=15){
+		return GPIOC;
+	}
+	else{
+		while(1);//error
+	}
+}
+static inline void adc_setuo(ADC_TypeDef *ptr){
+	if(ptr==ADC1){
+		RCC->APB2ENR|=(1<<8);//enable adc1
+	}
+	else if(ptr==ADC2){
+		RCC->APB2ENR|=(1<<9);//enable adc2
+	}
+	else if(ptr==ADC3){
+		RCC->APB2ENR|=(1<<10);//enable adc3
+	}
+	else{
+		while(1);//error
+	}
+}
+static inline void channel_adc(ADC_TypeDef *adc_port,uint8_t chn,uint8_t sample){
+	if(chn>=0&&chn<=9){
+		adc_port->SMPR2&=~((0b111<<(chn*3)));
+		adc_port->SMPR2|=(sample<<(chn*3));
 
-	RCC->AHB1ENR |= (1 << 0);	// ENABLE GPIOA
-	RCC->APB2ENR |= (1 << 8);   // ENABLE ADC1
+	}
+	else if(chn>=10&&chn<=15){
+		adc_port->SMPR1&=~((0b111<<(chn*3)));
+		adc_port->SMPR1|=(sample<<(chn*3));
+	}
+}
+void adc_init(ADC_TypeDef *adc_port,adc_config_t *ptr) {
 
-	// Set PA0 and PA1 to analog mode
-	GPIOA->MODER &= ~(0b1111);
-	GPIOA->MODER |= (0b11) | (0b11 << 2);	// PA0 and PA1
+	gpio_set_up config;
+	config.MODERx=GPIOx_MODER_ANALOG;
+	config.OSPEEDRx=GPIOx_OSPEEDR_LOW_SP;//dont care for adc
+	config.OTYPERx=GPIOx_OTYPER_PP;//dont care for adc
+	config.PINx=ptr->channel;
+	config.PUPDRx=GPIOx_PUPDR_NONE;
+	GPIO_TypeDef *port=channel_setup(ptr->channel);
+	gpio_init(port, &config);
+	adc_setuo(adc_port);
 
-	// VERY IMPORTANT for LM35: long sample time
-	// Channel 0 (PA0)
-	ADC1->SMPR2 |= (0b111 << 0);	// 480 cycles for CH0
-	// Channel 1 (PA1)
-	ADC1->SMPR2 |= (0b111 << 3);	// 480 cycles for CH1
 
-	// Enable ADC
-	ADC1->CR2 |= (1 << 0);
+
+
+
+
+	// Enable ADCx
+	adc_port->CR2 |= (1 << 0);
 
 	// Small delay to let ADC stabilize
 	for (volatile int i = 0; i < 10000; i++);
 
 	// Calibrate ADC (IMPORTANT to remove offset error)
-	ADC1->CR2 |= (1 << 3);
-	while (ADC1->CR2 & (1 << 3));	// wait until calibration finishes
+	adc_port->CR2 |= (1 << 3);
+	while (adc_port->CR2 & (1 << 3));	// wait until calibration finishes
 }
 
-uint16_t adc_read(uint8_t channel) {
+uint16_t adc_read(ADC_TypeDef *adc_port,uint8_t channel) {
 
 	// Clear SQ1 (we use only one conversion)
-	ADC1->SQR3 &= ~(0b11111);
+	adc_port->SQR3 &= ~(0b11111);
 
 	// Select channel:
 	// channel 0 -> PA0 (LM35)
 	// channel 1 -> PA1 (pot)
-	ADC1->SQR3 |= channel;
+	adc_port->SQR3 |= channel;
 
 	// Start conversion by software
-	ADC1->CR2 &= ~(1 << 30);	// reset state
-	ADC1->CR2 |= (1 << 30);		// start conversion
+	adc_port->CR2 &= ~(1 << 30);	// reset state
+	adc_port->CR2 |= (1 << 30);		// start conversion
 
 	// Wait until conversion is complete
-	while (!(ADC1->SR & (1 << 1)));
+	while (!(adc_port->SR & (1 << 1)));
 
 	// Reading DR clears EOC flag automatically
-	return ADC1->DR;
+	return adc_port->DR;
 }

@@ -1,0 +1,2 @@
+../Core/DRIVERS/spi/MySpi.c:3:6:spi_init	1
+../Core/DRIVERS/spi/MySpi.c:29:6:spi_transmit	4

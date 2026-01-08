@@ -1,3 +1,4 @@
+"./Core/DRIVERS/MyTimer/MyTimer.o"
 "./Core/DRIVERS/adc/MyAdc.o"
 "./Core/DRIVERS/gpio/gpiox.o"
 "./Core/DRIVERS/hcsr04/MyHcsr04.o"

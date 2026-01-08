@@ -22,6 +22,7 @@ C_DEPS :=
 
 # Every subdirectory with source files must be described here
 SUBDIRS := \
+Core/DRIVERS/MyTimer \
 Core/DRIVERS/adc \
 Core/DRIVERS/gpio \
 Core/DRIVERS/hcsr04 \

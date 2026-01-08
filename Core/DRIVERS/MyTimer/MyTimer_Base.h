@@ -1,11 +1,11 @@
-#ifndef MYTIMER_H_
-#define MYTIMER_H_
+#ifndef MYTIMER_BASE_H_
+#define MYTIMER_BASE_H_
 
 #include "stm32f446xx.h"
 #include <stdint.h>
 #include "gpiox.h"//we might need this lib too but not sure yet
 
-void TIM_init(void);
+void TIM_base_init(TIM_TypeDef * TIMx,uint16_t pcs,uint16_t arr);
 void TIM_start(void);
 void TIM_stop(void);
 

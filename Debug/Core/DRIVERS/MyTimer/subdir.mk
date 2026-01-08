@@ -5,13 +5,13 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
-../Core/DRIVERS/MyTimer/MyTimer.c 
+../Core/DRIVERS/MyTimer/MyTimer_Base.c 
 
 OBJS += \
-./Core/DRIVERS/MyTimer/MyTimer.o 
+./Core/DRIVERS/MyTimer/MyTimer_Base.o 
 
 C_DEPS += \
-./Core/DRIVERS/MyTimer/MyTimer.d 
+./Core/DRIVERS/MyTimer/MyTimer_Base.d 
 
 
 # Each subdirectory must supply rules for building sources it contributes
@@ -21,7 +21,7 @@ Core/DRIVERS/MyTimer/%.o Core/DRIVERS/MyTimer/%.su Core/DRIVERS/MyTimer/%.cyclo:
 clean: clean-Core-2f-DRIVERS-2f-MyTimer
 
 clean-Core-2f-DRIVERS-2f-MyTimer:
-	-$(RM) ./Core/DRIVERS/MyTimer/MyTimer.cyclo ./Core/DRIVERS/MyTimer/MyTimer.d ./Core/DRIVERS/MyTimer/MyTimer.o ./Core/DRIVERS/MyTimer/MyTimer.su
+	-$(RM) ./Core/DRIVERS/MyTimer/MyTimer_Base.cyclo ./Core/DRIVERS/MyTimer/MyTimer_Base.d ./Core/DRIVERS/MyTimer/MyTimer_Base.o ./Core/DRIVERS/MyTimer/MyTimer_Base.su
 
 .PHONY: clean-Core-2f-DRIVERS-2f-MyTimer
 

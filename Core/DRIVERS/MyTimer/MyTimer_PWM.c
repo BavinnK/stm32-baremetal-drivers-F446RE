@@ -2,6 +2,7 @@
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 static inline void pin_set_tim_chn(TIM_TypeDef *tim,GPIO_TypeDef*port,uint8_t pin,uint8_t chn){
 	//this inline func is gonna be ugly as hell but its gonna be readable trust me lol
+	//GPIOA
 	if(port==GPIOA && tim==TIM2 && chn==1 && pin==0){//PA0
 		port->AFR[0]&=~(0b1111<<(pin*4));
 		port->AFR[0]|=(1<<(pin*4));
@@ -53,6 +54,104 @@ static inline void pin_set_tim_chn(TIM_TypeDef *tim,GPIO_TypeDef*port,uint8_t pi
 	else if(port==GPIOA && tim==TIM1 && chn==4 && pin==11){//PA11
 		port->AFR[1]&=~(0b1111<<(pin*4));
 		port->AFR[1]|=(1<<(pin*4));
+	}
+	else if(port==GPIOA && tim==TIM2 && chn==1 && pin==15){//PA15
+		port->AFR[1]&=~(0b1111<<(pin*4));
+		port->AFR[1]|=(1<<(pin*4));
+	}
+	//GPIOB
+	else if(port==GPIOB && tim==TIM3 && chn==3 && pin==0){//PB0
+		port->AFR[0]&=~(0b1111<<(pin*4));
+		port->AFR[0]|=(2<<(pin*4));
+	}
+	else if(port==GPIOB && tim==TIM2 && chn==2 && pin==2){//PB2
+		port->AFR[0]&=~(0b1111<<(pin*4));
+		port->AFR[0]|=(1<<(pin*4));
+	}
+	else if(port==GPIOB && tim==TIM3 && chn==1 && pin==4){//PB4
+		port->AFR[0]&=~(0b1111<<(pin*4));
+		port->AFR[0]|=(2<<(pin*4));
+	}
+	else if(port==GPIOB && tim==TIM3 && chn==2 && pin==5){//PB5
+		port->AFR[0]&=~(0b1111<<(pin*4));
+		port->AFR[0]|=(2<<(pin*4));
+	}
+	else if(port==GPIOB && tim==TIM4 && chn==1 && pin==6){//PB6
+		port->AFR[0]&=~(0b1111<<(pin*4));
+		port->AFR[0]|=(2<<(pin*4));
+	}
+	else if(port==GPIOB && tim==TIM2 && chn==4 && pin==7){//PB7
+		port->AFR[0]&=~(0b1111<<(pin*4));
+		port->AFR[0]|=(1<<(pin*4));
+	}
+	else if(port==GPIOB && tim==TIM10 && chn==1 && pin==8){//PB8
+		port->AFR[1]&=~(0b1111<<(pin*4));
+		port->AFR[1]|=(3<<(pin*4));
+	}
+	else if(port==GPIOB && tim==TIM2 && chn==1 && pin==8){//PB8
+		port->AFR[1]&=~(0b1111<<(pin*4));
+		port->AFR[1]|=(1<<(pin*4));
+	}
+	else if(port==GPIOB && tim==TIM4 && chn==3 && pin==8){//PB8
+		port->AFR[1]&=~(0b1111<<(pin*4));
+		port->AFR[1]|=(2<<(pin*4));
+	}
+	else if(port==GPIOB && tim==TIM11 && chn==1 && pin==9){//PB9
+		port->AFR[1]&=~(0b1111<<(pin*4));
+		port->AFR[1]|=(3<<(pin*4));
+	}
+	else if(port==GPIOB && tim==TIM2 && chn==2 && pin==9){//PB9
+		port->AFR[1]&=~(0b1111<<(pin*4));
+		port->AFR[1]|=(1<<(pin*4));
+	}
+	else if(port==GPIOB && tim==TIM4 && chn==4 && pin==9){//PB9
+		port->AFR[1]&=~(0b1111<<(pin*4));
+		port->AFR[1]|=(2<<(pin*4));
+	}
+	else if(port==GPIOB && tim==TIM2 && chn==3 && pin==10){//PB10
+		port->AFR[1]&=~(0b1111<<(pin*4));
+		port->AFR[1]|=(1<<(pin*4));
+	}
+	else if(port==GPIOB && tim==TIM12 && chn==1 && pin==14){//PB14
+		port->AFR[1]&=~(0b1111<<(pin*4));
+		port->AFR[1]|=(0b1001<<(pin*4));
+	}
+	else if(port==GPIOB && tim==TIM12 && chn==2 && pin==15){//PB15
+		port->AFR[1]&=~(0b1111<<(pin*4));
+		port->AFR[1]|=(0b1001<<(pin*4));
+	}
+	//GPIOC
+	else if(port==GPIOC && tim==TIM3 && chn==1 && pin==6){//PC6
+		port->AFR[0]&=~(0b1111<<(pin*4));
+		port->AFR[0]|=(2<<(pin*4));
+	}
+	else if(port==GPIOC && tim==TIM8 && chn==1 && pin==6){//PC6
+		port->AFR[0]&=~(0b1111<<(pin*4));
+		port->AFR[0]|=(3<<(pin*4));
+	}
+	else if(port==GPIOC && tim==TIM3 && chn==2 && pin==7){//PC7
+		port->AFR[0]&=~(0b1111<<(pin*4));
+		port->AFR[0]|=(2<<(pin*4));
+	}
+	else if(port==GPIOC && tim==TIM8 && chn==2 && pin==7){//PC7
+		port->AFR[0]&=~(0b1111<<(pin*4));
+		port->AFR[0]|=(3<<(pin*4));
+	}
+	else if(port==GPIOC && tim==TIM3 && chn==3 && pin==8){//PC8
+		port->AFR[1]&=~(0b1111<<(pin*4));
+		port->AFR[1]|=(2<<(pin*4));
+	}
+	else if(port==GPIOC && tim==TIM8 && chn==3 && pin==8){//PC8
+		port->AFR[1]&=~(0b1111<<(pin*4));
+		port->AFR[1]|=(3<<(pin*4));
+	}
+	else if(port==GPIOC && tim==TIM3 && chn==4 && pin==9){//PC9
+		port->AFR[1]&=~(0b1111<<(pin*4));
+		port->AFR[1]|=(2<<(pin*4));
+	}
+	else if(port==GPIOC && tim==TIM8 && chn==4 && pin==9){//PC9
+		port->AFR[1]&=~(0b1111<<(pin*4));
+		port->AFR[1]|=(3<<(pin*4));
 	}
 }
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////

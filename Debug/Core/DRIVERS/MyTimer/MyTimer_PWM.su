@@ -1,2 +1,3 @@
+../Core/DRIVERS/MyTimer/MyTimer_PWM.c:3:20:pin_set_tim_chn	24	static
 ../Core/DRIVERS/MyTimer/MyTimer_PWM.c:160:20:set_chn	24	static
 ../Core/DRIVERS/MyTimer/MyTimer_PWM.c:188:6:TIMx_pwm_init	32	static

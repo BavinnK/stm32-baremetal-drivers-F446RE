@@ -4,7 +4,7 @@ static inline void pin_set_tim_chn(TIM_TypeDef *tim,GPIO_TypeDef*port,uint8_t pi
 	//this inline func is gonna be ugly as hell but its gonna be readable trust me lol
 	//GPIOA
 	if(port==GPIOA && tim==TIM2 && chn==1 && pin==0){//PA0
-		port->AFR[0]&=~(0b1111<<(pin*4));
+		port->AFR[]&=~(0b1111<<(pin*4));
 		port->AFR[0]|=(1<<(pin*4));
 	}
 	else if(port==GPIOA && tim==TIM5 && chn==1 && pin==0){//PA0
@@ -220,7 +220,7 @@ static inline void set_chn(TIM_TypeDef *tim,uint8_t chn,edge_captcure edge){
 		tim->CCER|=(1<<12)|(1<<13)|(1<<15);
 	}
 }
-static inline uint16_t chn_data(TIM_TypeDef *tim,uint8_t chn){
+static inline uint32_t chn_data(TIM_TypeDef *tim,uint8_t chn){
 	if(chn==1) 		return tim->CCR1;
 	else if(chn==2) return tim->CCR2;
 	else if(chn==3) return tim->CCR3;
@@ -244,6 +244,6 @@ void TIMx_IC_init(TIM_TypeDef *TIMx,GPIO_TypeDef *port,uint8_t channel,edge_capt
 	TIMx_base_start(TIMx);
 
 }
-uint16_t TIMx_get_data(TIM_TypeDef *TIMx,uint8_t channel){
+uint32_t TIMx_get_data(TIM_TypeDef *TIMx,uint8_t channel){
 	return chn_data(TIMx, channel);
 }

@@ -29,7 +29,7 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY
  12 .debug_info   000056d8  00000000  00000000  0000403c  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 13 .debug_abbrev 000016ae  00000000  00000000  00009714  2**0
+ 13 .debug_abbrev 000016b0  00000000  00000000  00009714  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
  14 .debug_aranges 00000570  00000000  00000000  0000adc8  2**3
                   CONTENTS, READONLY, DEBUGGING, OCTETS
@@ -737,7 +737,7 @@ void TIMx_base_start(TIM_TypeDef *TIMx){
 080007bc <pin_set_tim_chn>:
 #include "MyTimer_PWM.h"
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-static inline void pin_set_tim_chn(TIM_TypeDef *tim,GPIO_TypeDef*port,uint8_t pin,uint8_t chn){
+void pin_set_tim_chn(TIM_TypeDef *tim,GPIO_TypeDef*port,uint8_t pin,uint8_t chn){
  80007bc:	b480      	push	{r7}
  80007be:	b085      	sub	sp, #20
  80007c0:	af00      	add	r7, sp, #0

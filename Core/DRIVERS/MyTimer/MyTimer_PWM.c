@@ -1,6 +1,6 @@
 #include "MyTimer_PWM.h"
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-static inline void pin_set_tim_chn(TIM_TypeDef *tim,GPIO_TypeDef*port,uint8_t pin,uint8_t chn){
+void pin_set_tim_chn(TIM_TypeDef *tim,GPIO_TypeDef*port,uint8_t pin,uint8_t chn){
 	//this inline func is gonna be ugly as hell but its gonna be readable trust me lol
 	//GPIOA
 	if(port==GPIOA && tim==TIM2 && chn==1 && pin==0){//PA0

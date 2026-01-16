@@ -1,10 +1,11 @@
-#ifndef MYTIMER_IC_H
-#define MYTIMER_IC_H
+#ifndef MYTIMER_IC_H_
+#define MYTIMER_IC_H_
 #include "MyTimer_Base.h"
 #include "stm32f446xx.h"
 #include <stdint.h>
 #include "gpiox.h"
 #include "MyTimer_PWM.h"
+
 
 typedef enum{
 	FALLING_EDGE=1,

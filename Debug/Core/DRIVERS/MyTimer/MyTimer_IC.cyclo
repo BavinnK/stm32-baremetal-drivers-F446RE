@@ -1,0 +1,4 @@
+../Core/DRIVERS/MyTimer/MyTimer_IC.c:4:20:set_chn	25
+../Core/DRIVERS/MyTimer/MyTimer_IC.c:67:24:chn_data	5
+../Core/DRIVERS/MyTimer/MyTimer_IC.c:75:6:TIMx_IC_init	1
+../Core/DRIVERS/MyTimer/MyTimer_IC.c:92:10:TIMx_get_data	1

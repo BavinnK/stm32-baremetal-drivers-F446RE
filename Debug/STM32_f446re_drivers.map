@@ -97,21 +97,19 @@ Discarded input sections
  .text          0x00000000        0x0 ./Core/DRIVERS/MyTimer/MyTimer_IC.o
  .data          0x00000000        0x0 ./Core/DRIVERS/MyTimer/MyTimer_IC.o
  .bss           0x00000000        0x0 ./Core/DRIVERS/MyTimer/MyTimer_IC.o
- .text.pin_set_tim_chn
-                0x00000000      0xafc ./Core/DRIVERS/MyTimer/MyTimer_IC.o
  .text.set_chn  0x00000000      0x274 ./Core/DRIVERS/MyTimer/MyTimer_IC.o
  .text.chn_data
-                0x00000000       0x50 ./Core/DRIVERS/MyTimer/MyTimer_IC.o
+                0x00000000       0x4a ./Core/DRIVERS/MyTimer/MyTimer_IC.o
  .text.TIMx_IC_init
                 0x00000000       0x7a ./Core/DRIVERS/MyTimer/MyTimer_IC.o
  .text.TIMx_get_data
                 0x00000000       0x20 ./Core/DRIVERS/MyTimer/MyTimer_IC.o
- .debug_info    0x00000000      0x555 ./Core/DRIVERS/MyTimer/MyTimer_IC.o
- .debug_abbrev  0x00000000      0x1ba ./Core/DRIVERS/MyTimer/MyTimer_IC.o
+ .debug_info    0x00000000      0x526 ./Core/DRIVERS/MyTimer/MyTimer_IC.o
+ .debug_abbrev  0x00000000      0x1a1 ./Core/DRIVERS/MyTimer/MyTimer_IC.o
  .debug_aranges
-                0x00000000       0x40 ./Core/DRIVERS/MyTimer/MyTimer_IC.o
+                0x00000000       0x38 ./Core/DRIVERS/MyTimer/MyTimer_IC.o
  .debug_rnglists
-                0x00000000       0x2d ./Core/DRIVERS/MyTimer/MyTimer_IC.o
+                0x00000000       0x26 ./Core/DRIVERS/MyTimer/MyTimer_IC.o
  .debug_macro   0x00000000       0xed ./Core/DRIVERS/MyTimer/MyTimer_IC.o
  .debug_macro   0x00000000      0xad8 ./Core/DRIVERS/MyTimer/MyTimer_IC.o
  .debug_macro   0x00000000       0x28 ./Core/DRIVERS/MyTimer/MyTimer_IC.o
@@ -127,10 +125,10 @@ Discarded input sections
  .debug_macro   0x00000000     0x1011 ./Core/DRIVERS/MyTimer/MyTimer_IC.o
  .debug_macro   0x00000000      0x11f ./Core/DRIVERS/MyTimer/MyTimer_IC.o
  .debug_macro   0x00000000    0x16749 ./Core/DRIVERS/MyTimer/MyTimer_IC.o
- .debug_line    0x00000000      0xf77 ./Core/DRIVERS/MyTimer/MyTimer_IC.o
- .debug_str     0x00000000    0x8ac96 ./Core/DRIVERS/MyTimer/MyTimer_IC.o
+ .debug_line    0x00000000      0x806 ./Core/DRIVERS/MyTimer/MyTimer_IC.o
+ .debug_str     0x00000000    0x8ac97 ./Core/DRIVERS/MyTimer/MyTimer_IC.o
  .comment       0x00000000       0x44 ./Core/DRIVERS/MyTimer/MyTimer_IC.o
- .debug_frame   0x00000000       0xd0 ./Core/DRIVERS/MyTimer/MyTimer_IC.o
+ .debug_frame   0x00000000       0xa8 ./Core/DRIVERS/MyTimer/MyTimer_IC.o
  .ARM.attributes
                 0x00000000       0x34 ./Core/DRIVERS/MyTimer/MyTimer_IC.o
  .group         0x00000000        0xc ./Core/DRIVERS/MyTimer/MyTimer_PWM.o
@@ -2822,6 +2820,7 @@ LOAD C:/Users/pc/Documents/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32
                 0x0800079c                TIMx_base_start
  .text.pin_set_tim_chn
                 0x080007bc      0xafc ./Core/DRIVERS/MyTimer/MyTimer_PWM.o
+                0x080007bc                pin_set_tim_chn
  .text.set_chn  0x080012b8      0x108 ./Core/DRIVERS/MyTimer/MyTimer_PWM.o
  .text.TIMx_pwm_init
                 0x080013c0       0x7a ./Core/DRIVERS/MyTimer/MyTimer_PWM.o
@@ -3233,21 +3232,21 @@ LOAD C:/Users/pc/Documents/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32
  .debug_info    0x00004495      0x8ed ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.o
  .debug_info    0x00004d82      0x956 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.o
 
-.debug_abbrev   0x00000000     0x16ae
+.debug_abbrev   0x00000000     0x16b0
  .debug_abbrev  0x00000000      0x160 ./Core/DRIVERS/MyTimer/MyTimer_Base.o
- .debug_abbrev  0x00000160      0x185 ./Core/DRIVERS/MyTimer/MyTimer_PWM.o
- .debug_abbrev  0x000002e5      0x15b ./Core/DRIVERS/gpio/gpiox.o
- .debug_abbrev  0x00000440      0x207 ./Core/DRIVERS/hcsr04/MyHcsr04.o
- .debug_abbrev  0x00000647      0x1f2 ./Core/Src/main.o
- .debug_abbrev  0x00000839       0xf4 ./Core/Src/stm32f4xx_hal_msp.o
- .debug_abbrev  0x0000092d       0x73 ./Core/Src/stm32f4xx_it.o
- .debug_abbrev  0x000009a0      0x11a ./Core/Src/system_stm32f4xx.o
- .debug_abbrev  0x00000aba       0x24 ./Core/Startup/startup_stm32f446retx.o
- .debug_abbrev  0x00000ade      0x214 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o
- .debug_abbrev  0x00000cf2      0x328 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.o
- .debug_abbrev  0x0000101a      0x1d4 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.o
- .debug_abbrev  0x000011ee      0x2b6 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.o
- .debug_abbrev  0x000014a4      0x20a ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.o
+ .debug_abbrev  0x00000160      0x187 ./Core/DRIVERS/MyTimer/MyTimer_PWM.o
+ .debug_abbrev  0x000002e7      0x15b ./Core/DRIVERS/gpio/gpiox.o
+ .debug_abbrev  0x00000442      0x207 ./Core/DRIVERS/hcsr04/MyHcsr04.o
+ .debug_abbrev  0x00000649      0x1f2 ./Core/Src/main.o
+ .debug_abbrev  0x0000083b       0xf4 ./Core/Src/stm32f4xx_hal_msp.o
+ .debug_abbrev  0x0000092f       0x73 ./Core/Src/stm32f4xx_it.o
+ .debug_abbrev  0x000009a2      0x11a ./Core/Src/system_stm32f4xx.o
+ .debug_abbrev  0x00000abc       0x24 ./Core/Startup/startup_stm32f446retx.o
+ .debug_abbrev  0x00000ae0      0x214 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o
+ .debug_abbrev  0x00000cf4      0x328 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.o
+ .debug_abbrev  0x0000101c      0x1d4 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.o
+ .debug_abbrev  0x000011f0      0x2b6 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.o
+ .debug_abbrev  0x000014a6      0x20a ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.o
 
 .debug_aranges  0x00000000      0x570
  .debug_aranges

@@ -89,6 +89,7 @@ int main(void)
   MX_GPIO_Init();
   /* USER CODE BEGIN 2 */
   	 TIMx_pwm_init(TIM2, GPIOA, 5, 1000, 1000, 1, 1);
+  	TIMx_pwm_init(TIM2, GPIOA, 3, 1000, 1000, 1, 1);
   	// TIMx_pwm_init(TIMx, port, pin, pcs, arr, channel, duty_cycle)
 
   /* USER CODE END 2 */

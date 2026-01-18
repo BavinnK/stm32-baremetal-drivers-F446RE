@@ -1,4 +1,4 @@
 ../Core/DRIVERS/usart/RingBuffer.c:3:6:RingBuffer_Write	2
 ../Core/DRIVERS/usart/RingBuffer.c:10:6:RingBuffer_Read	2
-../Core/DRIVERS/usart/RingBuffer.c:21:6:RingBuffer_IsEmpty	2
-../Core/DRIVERS/usart/RingBuffer.c:26:6:RingBuffer_IsFull	2
+../Core/DRIVERS/usart/RingBuffer.c:20:6:RingBuffer_IsEmpty	2
+../Core/DRIVERS/usart/RingBuffer.c:25:6:RingBuffer_IsFull	2

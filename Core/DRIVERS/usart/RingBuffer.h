@@ -5,7 +5,7 @@
 #include <stdbool.h>
 #include "stm32f446xx.h"
 
-#define RING_BUF_SIZE 256 //size of our buffer
+#define RING_BUF_SIZE 256 //size of our buffer, which is 256 byte
 
 typedef struct {
     uint8_t buffer[RING_BUF_SIZE];

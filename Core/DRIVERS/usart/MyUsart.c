@@ -44,13 +44,13 @@ void Usart2_init(uint32_t baudRate){
 	USART2->BRR=set_baud(baudRate);
 	NVIC_EnableIRQ(USART2_IRQn);//enable the USART INT into the NVIC handler
 }
-bool Usart2_SendByte(char ch){
+void Usart2_SendByte(char ch){
 	bool isFull=RingBuffer_Write(&usart2_ring_TX, ch);
 	if(isFull){
 		USART2->CR1|=(1<<7);
-		return true;
+
 	}
-	else return false;
+
 }
 void Usart2_SendString(char *ptr){
 	while(*ptr){

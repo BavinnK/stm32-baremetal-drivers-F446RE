@@ -8,9 +8,9 @@
 #define RING_BUF_SIZE 256 //size of our buffer, which is 256 byte
 
 typedef struct {
-    uint8_t buffer[RING_BUF_SIZE];
-    uint32_t head;
-    uint32_t tail;
+    volatile uint8_t buffer[RING_BUF_SIZE];
+    volatile uint32_t head;
+    volatile uint32_t tail;
 } RingBuffer_t;
 
 void RingBuffer_Init(RingBuffer_t *rb);

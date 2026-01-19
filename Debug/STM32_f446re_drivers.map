@@ -406,14 +406,22 @@ Discarded input sections
  .text          0x00000000        0x0 ./Core/DRIVERS/usart/MyUsart.o
  .data          0x00000000        0x0 ./Core/DRIVERS/usart/MyUsart.o
  .bss           0x00000000        0x0 ./Core/DRIVERS/usart/MyUsart.o
+ .text.__NVIC_EnableIRQ
+                0x00000000       0x3c ./Core/DRIVERS/usart/MyUsart.o
+ .bss.usart2_ring
+                0x00000000      0x108 ./Core/DRIVERS/usart/MyUsart.o
+ .text.set_baud
+                0x00000000       0x8e ./Core/DRIVERS/usart/MyUsart.o
  .text.Usart2_init
-                0x00000000       0x6c ./Core/DRIVERS/usart/MyUsart.o
- .debug_info    0x00000000      0x298 ./Core/DRIVERS/usart/MyUsart.o
- .debug_abbrev  0x00000000      0x13c ./Core/DRIVERS/usart/MyUsart.o
+                0x00000000       0x94 ./Core/DRIVERS/usart/MyUsart.o
+ .text.USART2_IQRHandler
+                0x00000000       0x34 ./Core/DRIVERS/usart/MyUsart.o
+ .debug_info    0x00000000      0x7b1 ./Core/DRIVERS/usart/MyUsart.o
+ .debug_abbrev  0x00000000      0x219 ./Core/DRIVERS/usart/MyUsart.o
  .debug_aranges
-                0x00000000       0x20 ./Core/DRIVERS/usart/MyUsart.o
+                0x00000000       0x38 ./Core/DRIVERS/usart/MyUsart.o
  .debug_rnglists
-                0x00000000       0x13 ./Core/DRIVERS/usart/MyUsart.o
+                0x00000000       0x27 ./Core/DRIVERS/usart/MyUsart.o
  .debug_macro   0x00000000       0xec ./Core/DRIVERS/usart/MyUsart.o
  .debug_macro   0x00000000      0xad8 ./Core/DRIVERS/usart/MyUsart.o
  .debug_macro   0x00000000       0x28 ./Core/DRIVERS/usart/MyUsart.o
@@ -430,10 +438,10 @@ Discarded input sections
  .debug_macro   0x00000000      0x11f ./Core/DRIVERS/usart/MyUsart.o
  .debug_macro   0x00000000    0x16749 ./Core/DRIVERS/usart/MyUsart.o
  .debug_macro   0x00000000       0x22 ./Core/DRIVERS/usart/MyUsart.o
- .debug_line    0x00000000      0x64b ./Core/DRIVERS/usart/MyUsart.o
- .debug_str     0x00000000    0x8abee ./Core/DRIVERS/usart/MyUsart.o
+ .debug_line    0x00000000      0x747 ./Core/DRIVERS/usart/MyUsart.o
+ .debug_str     0x00000000    0x8b22c ./Core/DRIVERS/usart/MyUsart.o
  .comment       0x00000000       0x44 ./Core/DRIVERS/usart/MyUsart.o
- .debug_frame   0x00000000       0x34 ./Core/DRIVERS/usart/MyUsart.o
+ .debug_frame   0x00000000       0xac ./Core/DRIVERS/usart/MyUsart.o
  .ARM.attributes
                 0x00000000       0x34 ./Core/DRIVERS/usart/MyUsart.o
  .group         0x00000000        0xc ./Core/DRIVERS/usart/RingBuffer.o
@@ -457,13 +465,13 @@ Discarded input sections
  .text.RingBuffer_Write
                 0x00000000       0x42 ./Core/DRIVERS/usart/RingBuffer.o
  .text.RingBuffer_Read
-                0x00000000       0x42 ./Core/DRIVERS/usart/RingBuffer.o
+                0x00000000       0x44 ./Core/DRIVERS/usart/RingBuffer.o
  .text.RingBuffer_IsEmpty
                 0x00000000       0x2a ./Core/DRIVERS/usart/RingBuffer.o
  .text.RingBuffer_IsFull
                 0x00000000       0x2e ./Core/DRIVERS/usart/RingBuffer.o
- .debug_info    0x00000000      0x1b0 ./Core/DRIVERS/usart/RingBuffer.o
- .debug_abbrev  0x00000000      0x106 ./Core/DRIVERS/usart/RingBuffer.o
+ .debug_info    0x00000000      0x1bf ./Core/DRIVERS/usart/RingBuffer.o
+ .debug_abbrev  0x00000000      0x10d ./Core/DRIVERS/usart/RingBuffer.o
  .debug_aranges
                 0x00000000       0x38 ./Core/DRIVERS/usart/RingBuffer.o
  .debug_rnglists

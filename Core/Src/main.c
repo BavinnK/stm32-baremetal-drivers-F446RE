@@ -23,6 +23,7 @@
 /* USER CODE BEGIN Includes */
 #include "gpiox.h"
 #include "MyTimer/MyTimer_PWM.h"
+#include "MyUsart.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -90,6 +91,7 @@ int main(void)
   /* USER CODE BEGIN 2 */
   	 TIMx_pwm_init(TIM2, GPIOA, 5, 1000, 1000, 1, 1);
   	TIMx_pwm_init(TIM2, GPIOA, 3, 1000, 1000, 1, 1);
+  	Usart2_init(9600);
   	// TIMx_pwm_init(TIMx, port, pin, pcs, arr, channel, duty_cycle)
 
   /* USER CODE END 2 */
@@ -99,7 +101,9 @@ int main(void)
   while (1)
   {
     /* USER CODE END WHILE */
-
+	  char hon [60] ="Hello world from STM32F446RE, with USART ringBuffer\n\r";
+	  Usart2_SendString(hon);
+	  HAL_Delay(1000);
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */

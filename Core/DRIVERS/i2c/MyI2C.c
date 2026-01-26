@@ -78,3 +78,10 @@ void I2Cx_init(I2C_TypeDef *I2Cx){
 	I2Cx->TRISE=42;
 	I2Cx->CR1|=1;
 }
+void I2Cx_start(I2C_TypeDef *I2Cx){
+	I2Cx->CR1|=(1<<8);
+	while(!(I2Cx->SR1&(1<<0)));//wait until  I2C is ready
+}
+void I2Cx_stop(I2C_TypeDef *I2Cx){
+	I2Cx->CR1&=~(1<<8);
+}

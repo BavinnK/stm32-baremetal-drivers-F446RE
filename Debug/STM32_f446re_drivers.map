@@ -312,12 +312,16 @@ Discarded input sections
  .text.i2c_set  0x00000000      0x1a8 ./Core/DRIVERS/i2c/MyI2C.o
  .text.I2Cx_init
                 0x00000000       0x46 ./Core/DRIVERS/i2c/MyI2C.o
- .debug_info    0x00000000      0x503 ./Core/DRIVERS/i2c/MyI2C.o
- .debug_abbrev  0x00000000      0x16b ./Core/DRIVERS/i2c/MyI2C.o
+ .text.I2Cx_start
+                0x00000000       0x30 ./Core/DRIVERS/i2c/MyI2C.o
+ .text.I2Cx_stop
+                0x00000000       0x20 ./Core/DRIVERS/i2c/MyI2C.o
+ .debug_info    0x00000000      0x548 ./Core/DRIVERS/i2c/MyI2C.o
+ .debug_abbrev  0x00000000      0x189 ./Core/DRIVERS/i2c/MyI2C.o
  .debug_aranges
-                0x00000000       0x28 ./Core/DRIVERS/i2c/MyI2C.o
+                0x00000000       0x38 ./Core/DRIVERS/i2c/MyI2C.o
  .debug_rnglists
-                0x00000000       0x1a ./Core/DRIVERS/i2c/MyI2C.o
+                0x00000000       0x26 ./Core/DRIVERS/i2c/MyI2C.o
  .debug_macro   0x00000000       0xd3 ./Core/DRIVERS/i2c/MyI2C.o
  .debug_macro   0x00000000      0xad8 ./Core/DRIVERS/i2c/MyI2C.o
  .debug_macro   0x00000000       0x28 ./Core/DRIVERS/i2c/MyI2C.o
@@ -333,10 +337,10 @@ Discarded input sections
  .debug_macro   0x00000000     0x1011 ./Core/DRIVERS/i2c/MyI2C.o
  .debug_macro   0x00000000      0x11f ./Core/DRIVERS/i2c/MyI2C.o
  .debug_macro   0x00000000    0x16749 ./Core/DRIVERS/i2c/MyI2C.o
- .debug_line    0x00000000      0x729 ./Core/DRIVERS/i2c/MyI2C.o
- .debug_str     0x00000000    0x8acc7 ./Core/DRIVERS/i2c/MyI2C.o
+ .debug_line    0x00000000      0x777 ./Core/DRIVERS/i2c/MyI2C.o
+ .debug_str     0x00000000    0x8acdc ./Core/DRIVERS/i2c/MyI2C.o
  .comment       0x00000000       0x44 ./Core/DRIVERS/i2c/MyI2C.o
- .debug_frame   0x00000000       0x58 ./Core/DRIVERS/i2c/MyI2C.o
+ .debug_frame   0x00000000       0xa8 ./Core/DRIVERS/i2c/MyI2C.o
  .ARM.attributes
                 0x00000000       0x34 ./Core/DRIVERS/i2c/MyI2C.o
  .group         0x00000000        0xc ./Core/DRIVERS/pwm/MyPwm.o

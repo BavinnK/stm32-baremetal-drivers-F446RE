@@ -19,6 +19,7 @@ RM := rm -rf
 -include Core/DRIVERS/i2c/subdir.mk
 -include Core/DRIVERS/hcsr04/subdir.mk
 -include Core/DRIVERS/gpio/subdir.mk
+-include Core/DRIVERS/dma/subdir.mk
 -include Core/DRIVERS/adc/subdir.mk
 -include Core/DRIVERS/MyTimer/subdir.mk
 -include objects.mk

@@ -319,7 +319,7 @@ Discarded input sections
  .text.I2Cx_write
                 0x00000000       0x74 ./Core/DRIVERS/i2c/MyI2C.o
  .text.I2Cx_read
-                0x00000000      0x16a ./Core/DRIVERS/i2c/MyI2C.o
+                0x00000000      0x168 ./Core/DRIVERS/i2c/MyI2C.o
  .debug_info    0x00000000      0x60a ./Core/DRIVERS/i2c/MyI2C.o
  .debug_abbrev  0x00000000      0x1a5 ./Core/DRIVERS/i2c/MyI2C.o
  .debug_aranges

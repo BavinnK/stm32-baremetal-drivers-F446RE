@@ -134,15 +134,14 @@ void I2Cx_read(I2C_TypeDef *I2Cx,uint8_t slave_addr, uint8_t register_addr, uint
 		buffer[1]=I2Cx->DR;
 	}
 	else{
-		(void)I2Cx->SR1; (void)I2Cx->SR2;
+		I2Cx->CR1|=(1<<10);//set ACK
+		(void)I2Cx->SR1; (void)I2Cx->SR2;//clear addr  bit
 		for(uint8_t i=0;i<data_length;i++){
-			if(i==data_length-1){
+			if(i==data_length-2){
 				I2Cx->CR1&=~(1<<10);//set NACK
 				I2Cx_stop(I2Cx);
 			}
-			else{
-				I2Cx->CR1|=(1<<10);//set ACK
-			}
+
 			while(!(I2Cx->SR1&(1<<6)));
 			buffer[i]=I2Cx->DR;
 		}

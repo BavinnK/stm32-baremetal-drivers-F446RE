@@ -2,6 +2,7 @@
 #define MYDMA_H
 #include "stm32f446xx.h"
 #include <stdint.h>
+
 typedef enum{
 	PRIOTITY_LOW=0,
 	PRIOTITY_MED,
@@ -38,8 +39,8 @@ typedef struct{
 	per_size PERIPHERAL_DATA_SIZE;
 	dma_direction DIRECTION;
 	dma_mode MODE;
-
 }DMA_config_t;
 
+void DMAx_init(DMA_TypeDef *DMAx,DMA_config_t* DMA_CONFIG);
 
 #endif

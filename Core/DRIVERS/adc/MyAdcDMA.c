@@ -56,10 +56,24 @@ void adc_dma_init(ADC_TypeDef *adc_port,adc_config_t *ptr,DMA_TypeDef *DMAx,DMA_
 	adc_port->CR2 |= (1 << 0)|(1<<1);
 	adc_port->CR2&=~(1<<30);//disable conversion
 	//small delay to let ADC stabilize
-	for (volatile int i = 0; i < 1000; i++);
+	for (volatile uint16_t i = 0; i < 1000; i++);
 
 
 	adc_port->CR2 |= (3<<8);
+	for(uint8_t i=0;i<num_of_channels;i++){//the users passes which channel they want to use and by this loop we will set it up
+		if(ptr->channel[i]<7){
+			adc_port->SQR3|=(ptr->channel[i]<<(i*5));
+		}
+		else if(ptr->channel[i]>6 && ptr->channel[i]<13){
+			adc_port->SQR2|=(ptr->channel[i]<<((i*5)-35));
+		}
+		else if(ptr->channel[i]>12 && ptr->channel[i]<17){
+			adc_port->SQR1|=(ptr->channel[i]<<((i*5)-65));
+		}
+		else while(1);
+	}
+	adc_port->SQR1&=~(0b1111<<20);
+	adc_port->SQR1|=num_of_channels-1;//why -1 cuz 0 is count as 1 conversion
 
 	DMAx_init(DMAx, DMAx_config);
 	adc_port->CR2|=(1<<30);

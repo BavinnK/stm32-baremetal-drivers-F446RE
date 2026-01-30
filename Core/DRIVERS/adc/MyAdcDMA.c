@@ -14,7 +14,7 @@ static inline GPIO_TypeDef* channel_setup(uint8_t port){//inline helper func for
 		while(1);//error
 	}
 }
-static inline void adc_setuo(ADC_TypeDef *ptr){
+static inline void adc_setup(ADC_TypeDef *ptr){
 	if(ptr==ADC1){
 		RCC->APB2ENR|=(1<<8);//enable adc1
 	}
@@ -49,31 +49,34 @@ void adc_dma_init(ADC_TypeDef *adc_port,adc_config_t *ptr,DMA_TypeDef *DMAx,DMA_
 		config.PUPDRx=GPIOx_PUPDR_NONE;
 		GPIO_TypeDef *port=channel_setup(ptr->channel[i]);
 		gpio_init(port, &config);
-		adc_setuo(adc_port);
+		channel_adc(adc_port, ptr->channel[i], ptr->sample_time);
 	}
+	adc_setup(adc_port);
 	//enable ADCx
 	adc_port->CR1|=(1<<8);//enable scan mode
 	adc_port->CR2 |= (1 << 0)|(1<<1);
 	adc_port->CR2&=~(1<<30);//disable conversion
+
 	//small delay to let ADC stabilize
 	for (volatile uint16_t i = 0; i < 1000; i++);
-
-
+	adc_port->SQR1=0;
+	adc_port->SQR2=0;
+	adc_port->SQR3=0;
 	adc_port->CR2 |= (3<<8);
 	for(uint8_t i=0;i<num_of_channels;i++){//the users passes which channel they want to use and by this loop we will set it up
-		if(ptr->channel[i]<7){
+		if(i<6){
 			adc_port->SQR3|=(ptr->channel[i]<<(i*5));
 		}
-		else if(ptr->channel[i]>6 && ptr->channel[i]<13){
+		else if(i<12){
 			adc_port->SQR2|=(ptr->channel[i]<<((i*5)-35));
 		}
-		else if(ptr->channel[i]>12 && ptr->channel[i]<17){
+		else if(i<16){
 			adc_port->SQR1|=(ptr->channel[i]<<((i*5)-65));
 		}
 		else while(1);
 	}
 	adc_port->SQR1&=~(0b1111<<20);
-	adc_port->SQR1|=num_of_channels-1;//why -1 cuz 0 is count as 1 conversion
+	adc_port->SQR1|=(num_of_channels-1)<<20;//why -1 cuz 0 is count as 1 conversion
 
 	DMAx_init(DMAx, DMAx_config);
 	adc_port->CR2|=(1<<30);

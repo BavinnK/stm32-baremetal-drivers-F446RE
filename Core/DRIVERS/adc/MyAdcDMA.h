@@ -24,10 +24,10 @@ typedef enum{
 	ADCx_CHANNEL_15=15
 }adc_channels_t;
 typedef struct{
-	adc_channels_t channel;
+	adc_channels_t channel[16];
 	uint8_t sample_time;
 }adc_config_t;
-void adc_dma_init(ADC_TypeDef *adc_port,adc_config_t *ptr,DMA_TypeDef *DMAx,DMA_config_t* DMAx_config);
+void adc_dma_init(ADC_TypeDef *adc_port,adc_config_t *ptr,DMA_TypeDef *DMAx,DMA_config_t* DMAx_config,uint8_t num_of_channels);
 
 
 

@@ -39,18 +39,18 @@ static inline void channel_adc(ADC_TypeDef *adc_port,uint8_t chn,uint8_t sample)
 		adc_port->SMPR1|=(sample<<(chn*3));
 	}
 }
-void adc_dma_init(ADC_TypeDef *adc_port,adc_config_t *ptr,DMA_TypeDef *DMAx,DMA_config_t* DMAx_config) {
-
-	gpio_set_up config;
-	config.MODERx=GPIOx_MODER_ANALOG;
-	config.OSPEEDRx=GPIOx_OSPEEDR_LOW_SP;//dont care for adc
-	config.OTYPERx=GPIOx_OTYPER_PP;//dont care for adc
-	config.PINx=ptr->channel;
-	config.PUPDRx=GPIOx_PUPDR_NONE;
-	GPIO_TypeDef *port=channel_setup(ptr->channel);
-	gpio_init(port, &config);
-	adc_setuo(adc_port);
-
+void adc_dma_init(ADC_TypeDef *adc_port,adc_config_t *ptr,DMA_TypeDef *DMAx,DMA_config_t* DMAx_config,uint8_t num_of_channels) {
+	for(int i=0;i<num_of_channels;i++){
+		gpio_set_up config;
+		config.MODERx=GPIOx_MODER_ANALOG;
+		config.OSPEEDRx=GPIOx_OSPEEDR_LOW_SP;//dont care for adc
+		config.OTYPERx=GPIOx_OTYPER_PP;//dont care for adc
+		config.PINx=ptr->channel[i];
+		config.PUPDRx=GPIOx_PUPDR_NONE;
+		GPIO_TypeDef *port=channel_setup(ptr->channel[i]);
+		gpio_init(port, &config);
+		adc_setuo(adc_port);
+	}
 	//enable ADCx
 	adc_port->CR1|=(1<<8);//enable scan mode
 	adc_port->CR2 |= (1 << 0)|(1<<1);

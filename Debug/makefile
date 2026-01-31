@@ -15,7 +15,6 @@ RM := rm -rf
 -include Core/EXAMPLE_DRIVERS/subdir.mk
 -include Core/DRIVERS/usart/subdir.mk
 -include Core/DRIVERS/spi/subdir.mk
--include Core/DRIVERS/pwm/subdir.mk
 -include Core/DRIVERS/i2c/subdir.mk
 -include Core/DRIVERS/hcsr04/subdir.mk
 -include Core/DRIVERS/gpio/subdir.mk

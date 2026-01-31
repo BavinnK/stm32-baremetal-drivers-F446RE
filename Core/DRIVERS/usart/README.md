@@ -1,17 +1,9 @@
-Bare-metal USART2 transmit driver for STM32F4 using DMA1 Stream 6.
-
-	-Uses USART2 TX (PA2, AF7)
-	-DMA is used so CPU does not block while sending data
-	-Designed for sending strings only (TX)
-	-No interrupts used (simple + lightweight)
-
-How it works:
-
-	1.USART2_init() configures GPIO, USART2, and DMA
-	2.send_str() sends a string using DMA (non-blocking after setup)
-
-Notes:
-
-	-Baud rate is fixed to 9600 (fixed for now, will change it)
-	-Null terminator is not transmitted
-	-RX is not implemented (yet)
+Bare-metal USART2 driver for STM32 with ring buffer support.
+Configures TX/RX GPIO pins and enables USART2 clock.
+AF settings, speed, and pull-ups are configured for TX/RX pins.
+Baud rate is set using pre-calculated BRR values to avoid floating-point math.
+USART2 is initialized with TX, RX, and RX interrupt enabled.
+Supports sending a single byte or string using TX ring buffer.
+RX data is stored in RX ring buffer via USART2 IRQ handler.
+TX ring buffer data is transmitted automatically when TXE flag is set.
+Polling is not required; IRQ-driven communication with software-managed ring buffers.

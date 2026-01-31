@@ -26,25 +26,6 @@ This repository currently provides drivers for:
 - USART
 - HC‑SR04 Ultrasonic Sensor (I2C-based usage)
 
-## Repository Structure
-
-STM32_BareMetal_F446RE
-├── core/ # Core MCU setup and shared definitions
-├── drivers/ # Peripheral drivers
-│ ├── GPIO/
-│ ├── DMA/
-│ ├── ADC/
-│ ├── Timer/
-│ │ ├── TimerBase/
-│ │ ├── TimerIC/
-│ │ ├── TimerOC/
-│ │ └── TimerPWM/
-│ ├── I2C/
-│ ├── SPI/
-│ ├── USART/
-│ └── HC-SR04/
-└── README.md
-
 
 ## How to Use
 

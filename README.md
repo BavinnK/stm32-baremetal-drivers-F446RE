@@ -24,7 +24,7 @@ This repository currently provides drivers for:
 - I2C
 - SPI
 - USART
-- HC‑SR04 Ultrasonic Sensor (I2C-based usage)
+- HC‑SR04 Ultrasonic Sensor
 
 
 ## How to Use

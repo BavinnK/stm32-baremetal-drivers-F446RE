@@ -1,1 +1,1 @@
-../Core/DRIVERS/CLOCK/clock.c:4:6:clock_init_180Mhz	4	static
+../Core/DRIVERS/CLOCK/clock.c:4:6:systemClock_180MHz	4	static

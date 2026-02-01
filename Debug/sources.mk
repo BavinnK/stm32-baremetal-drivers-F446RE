@@ -22,6 +22,7 @@ C_DEPS :=
 
 # Every subdirectory with source files must be described here
 SUBDIRS := \
+Core/DRIVERS/CLOCK \
 Core/DRIVERS/MyTimer \
 Core/DRIVERS/adc \
 Core/DRIVERS/dma \
@@ -33,5 +34,4 @@ Core/DRIVERS/usart \
 Core/Src \
 Core/Startup \
 Drivers/STM32F4xx_HAL_Driver/Src \
-Core/EXAMPLE_DRIVERS \
 

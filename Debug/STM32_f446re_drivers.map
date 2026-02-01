@@ -77,8 +77,8 @@ Discarded input sections
  .data          0x00000000        0x0 ./Core/DRIVERS/CLOCK/clock.o
  .bss           0x00000000        0x0 ./Core/DRIVERS/CLOCK/clock.o
  .text.clock_init_180Mhz
-                0x00000000       0x98 ./Core/DRIVERS/CLOCK/clock.o
- .debug_info    0x00000000      0x286 ./Core/DRIVERS/CLOCK/clock.o
+                0x00000000       0xb8 ./Core/DRIVERS/CLOCK/clock.o
+ .debug_info    0x00000000      0x2ec ./Core/DRIVERS/CLOCK/clock.o
  .debug_abbrev  0x00000000       0xb5 ./Core/DRIVERS/CLOCK/clock.o
  .debug_aranges
                 0x00000000       0x20 ./Core/DRIVERS/CLOCK/clock.o
@@ -99,8 +99,8 @@ Discarded input sections
  .debug_macro   0x00000000     0x1011 ./Core/DRIVERS/CLOCK/clock.o
  .debug_macro   0x00000000      0x11f ./Core/DRIVERS/CLOCK/clock.o
  .debug_macro   0x00000000    0x16749 ./Core/DRIVERS/CLOCK/clock.o
- .debug_line    0x00000000      0x5f8 ./Core/DRIVERS/CLOCK/clock.o
- .debug_str     0x00000000    0x8aae8 ./Core/DRIVERS/CLOCK/clock.o
+ .debug_line    0x00000000      0x606 ./Core/DRIVERS/CLOCK/clock.o
+ .debug_str     0x00000000    0x8ab10 ./Core/DRIVERS/CLOCK/clock.o
  .comment       0x00000000       0x44 ./Core/DRIVERS/CLOCK/clock.o
  .debug_frame   0x00000000       0x30 ./Core/DRIVERS/CLOCK/clock.o
  .ARM.attributes

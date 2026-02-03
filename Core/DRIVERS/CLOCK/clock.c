@@ -6,7 +6,10 @@ void systemClock_180MHz(void){
 	while(!(RCC->CR&(1<<17)));		//wait for the HSE clock to be ready
 	RCC->APB1ENR|=(1<<28);			//since we are gonna run the chip at 180Mhz, it needs more juice i mean voltage
 	PWR->CR|=(3<<14);				//we set the scale mode to 1 max performance
-	while(!(PWR->CSR&(1<<16)));		//wait until Over-drive mode is ready
+	PWR->CR|=(1<<16);				//we need a special sequence cuz the overdrive itself is not enough for the ower we enable overdrive
+	while(!(PWR->CSR&(1<<16)));		//wait until overdrive is enabled
+	PWR->CR|=(1<<17);				//after overdrive is enabled then we have to enable the switch overdrive
+	while((PWR->CSR&(1<<17)));		//wait until overdrive switching is enabled
 	/*
 	 * the CPU will now run at 180Mhz, but we have a problem
 	 * which is the internal perpherials like the flash

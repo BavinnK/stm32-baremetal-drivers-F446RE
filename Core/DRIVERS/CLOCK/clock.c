@@ -2,7 +2,7 @@
 #include <stdint.h>
 
 void systemClock_180MHz(void){
-	RCC->CR|=(1<<16);				//enable external 8mhz oscillator
+	RCC->CR|=(1<<16);				//enable external 8Mhz oscillator HSE
 	while(!(RCC->CR&(1<<17)));		//wait for the HSE clock to be ready
 	RCC->APB1ENR|=(1<<28);			//since we are gonna run the chip at 180Mhz, it needs more juice i mean voltage
 	PWR->CR|=(3<<14);				//we set the scale mode to 1 max performance
@@ -29,6 +29,7 @@ void systemClock_180MHz(void){
 	RCC->PLLCFGR&=~(0b111111111);	//clear PLLN bits
 	RCC->PLLCFGR|=(360<<6);			//then multiply the 1 Mhz that we divided in the PLLM to 360, the multiply spot should be between 192Mhz to 432Mhz i want 360 to get 180 easily
 	RCC->PLLCFGR&=~(3<<16);			//set the PLLP bits to 00 which means the PLLN freq will be divided by 2, the 360 that we got we divide by 2 and kaboom we got 180Mhz
+	RCC->PLLCFGR|=(1<<22);			//we have to tell the PLL to look at HSE cuz in default it looks at HSI
 	RCC->CR|=(1<<24);				//enable PLL
 	while(!(RCC->CR&(1<<25)));		//wait for the PLL to stabilize and locked
 	RCC->CFGR&=~(2);				//clear the SW bits

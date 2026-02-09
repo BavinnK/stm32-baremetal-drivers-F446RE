@@ -8,7 +8,7 @@
 "./Core/DRIVERS/gpio/gpiox.o"
 "./Core/DRIVERS/hcsr04/MyHcsr04.o"
 "./Core/DRIVERS/i2c/MyI2C.o"
-"./Core/DRIVERS/spi/MySPI2.o"
+"./Core/DRIVERS/spi/MySPI.o"
 "./Core/DRIVERS/usart/MyUsart.o"
 "./Core/DRIVERS/usart/RingBuffer.o"
 "./Core/Src/main.o"

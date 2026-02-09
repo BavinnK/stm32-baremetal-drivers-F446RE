@@ -509,102 +509,100 @@ Discarded input sections
  .debug_frame   0x00000000       0xf0 ./Core/DRIVERS/i2c/MyI2C.o
  .ARM.attributes
                 0x00000000       0x34 ./Core/DRIVERS/i2c/MyI2C.o
- .group         0x00000000        0xc ./Core/DRIVERS/spi/MySPI2.o
- .group         0x00000000        0xc ./Core/DRIVERS/spi/MySPI2.o
- .group         0x00000000        0xc ./Core/DRIVERS/spi/MySPI2.o
- .group         0x00000000        0xc ./Core/DRIVERS/spi/MySPI2.o
- .group         0x00000000        0xc ./Core/DRIVERS/spi/MySPI2.o
- .group         0x00000000        0xc ./Core/DRIVERS/spi/MySPI2.o
- .group         0x00000000        0xc ./Core/DRIVERS/spi/MySPI2.o
- .group         0x00000000        0xc ./Core/DRIVERS/spi/MySPI2.o
- .group         0x00000000        0xc ./Core/DRIVERS/spi/MySPI2.o
- .group         0x00000000        0xc ./Core/DRIVERS/spi/MySPI2.o
- .group         0x00000000        0xc ./Core/DRIVERS/spi/MySPI2.o
- .group         0x00000000        0xc ./Core/DRIVERS/spi/MySPI2.o
- .group         0x00000000        0xc ./Core/DRIVERS/spi/MySPI2.o
- .group         0x00000000        0xc ./Core/DRIVERS/spi/MySPI2.o
- .group         0x00000000        0xc ./Core/DRIVERS/spi/MySPI2.o
- .group         0x00000000        0xc ./Core/DRIVERS/spi/MySPI2.o
- .group         0x00000000        0xc ./Core/DRIVERS/spi/MySPI2.o
- .group         0x00000000        0xc ./Core/DRIVERS/spi/MySPI2.o
- .group         0x00000000        0xc ./Core/DRIVERS/spi/MySPI2.o
- .group         0x00000000        0xc ./Core/DRIVERS/spi/MySPI2.o
- .group         0x00000000        0xc ./Core/DRIVERS/spi/MySPI2.o
- .group         0x00000000        0xc ./Core/DRIVERS/spi/MySPI2.o
- .group         0x00000000        0xc ./Core/DRIVERS/spi/MySPI2.o
- .group         0x00000000        0xc ./Core/DRIVERS/spi/MySPI2.o
- .group         0x00000000        0xc ./Core/DRIVERS/spi/MySPI2.o
- .group         0x00000000        0xc ./Core/DRIVERS/spi/MySPI2.o
- .group         0x00000000        0xc ./Core/DRIVERS/spi/MySPI2.o
- .group         0x00000000        0xc ./Core/DRIVERS/spi/MySPI2.o
- .group         0x00000000        0xc ./Core/DRIVERS/spi/MySPI2.o
- .group         0x00000000        0xc ./Core/DRIVERS/spi/MySPI2.o
- .group         0x00000000        0xc ./Core/DRIVERS/spi/MySPI2.o
- .group         0x00000000        0xc ./Core/DRIVERS/spi/MySPI2.o
- .text          0x00000000        0x0 ./Core/DRIVERS/spi/MySPI2.o
- .data          0x00000000        0x0 ./Core/DRIVERS/spi/MySPI2.o
- .bss           0x00000000        0x0 ./Core/DRIVERS/spi/MySPI2.o
+ .group         0x00000000        0xc ./Core/DRIVERS/spi/MySPI.o
+ .group         0x00000000        0xc ./Core/DRIVERS/spi/MySPI.o
+ .group         0x00000000        0xc ./Core/DRIVERS/spi/MySPI.o
+ .group         0x00000000        0xc ./Core/DRIVERS/spi/MySPI.o
+ .group         0x00000000        0xc ./Core/DRIVERS/spi/MySPI.o
+ .group         0x00000000        0xc ./Core/DRIVERS/spi/MySPI.o
+ .group         0x00000000        0xc ./Core/DRIVERS/spi/MySPI.o
+ .group         0x00000000        0xc ./Core/DRIVERS/spi/MySPI.o
+ .group         0x00000000        0xc ./Core/DRIVERS/spi/MySPI.o
+ .group         0x00000000        0xc ./Core/DRIVERS/spi/MySPI.o
+ .group         0x00000000        0xc ./Core/DRIVERS/spi/MySPI.o
+ .group         0x00000000        0xc ./Core/DRIVERS/spi/MySPI.o
+ .group         0x00000000        0xc ./Core/DRIVERS/spi/MySPI.o
+ .group         0x00000000        0xc ./Core/DRIVERS/spi/MySPI.o
+ .group         0x00000000        0xc ./Core/DRIVERS/spi/MySPI.o
+ .group         0x00000000        0xc ./Core/DRIVERS/spi/MySPI.o
+ .group         0x00000000        0xc ./Core/DRIVERS/spi/MySPI.o
+ .group         0x00000000        0xc ./Core/DRIVERS/spi/MySPI.o
+ .group         0x00000000        0xc ./Core/DRIVERS/spi/MySPI.o
+ .group         0x00000000        0xc ./Core/DRIVERS/spi/MySPI.o
+ .group         0x00000000        0xc ./Core/DRIVERS/spi/MySPI.o
+ .group         0x00000000        0xc ./Core/DRIVERS/spi/MySPI.o
+ .group         0x00000000        0xc ./Core/DRIVERS/spi/MySPI.o
+ .group         0x00000000        0xc ./Core/DRIVERS/spi/MySPI.o
+ .group         0x00000000        0xc ./Core/DRIVERS/spi/MySPI.o
+ .group         0x00000000        0xc ./Core/DRIVERS/spi/MySPI.o
+ .group         0x00000000        0xc ./Core/DRIVERS/spi/MySPI.o
+ .group         0x00000000        0xc ./Core/DRIVERS/spi/MySPI.o
+ .group         0x00000000        0xc ./Core/DRIVERS/spi/MySPI.o
+ .group         0x00000000        0xc ./Core/DRIVERS/spi/MySPI.o
+ .group         0x00000000        0xc ./Core/DRIVERS/spi/MySPI.o
+ .group         0x00000000        0xc ./Core/DRIVERS/spi/MySPI.o
+ .text          0x00000000        0x0 ./Core/DRIVERS/spi/MySPI.o
+ .data          0x00000000        0x0 ./Core/DRIVERS/spi/MySPI.o
+ .bss           0x00000000        0x0 ./Core/DRIVERS/spi/MySPI.o
  .text.set_format
-                0x00000000       0x40 ./Core/DRIVERS/spi/MySPI2.o
+                0x00000000       0x40 ./Core/DRIVERS/spi/MySPI.o
  .text.set_freq
-                0x00000000       0x74 ./Core/DRIVERS/spi/MySPI2.o
- .text.SPI2_init
-                0x00000000      0x134 ./Core/DRIVERS/spi/MySPI2.o
+                0x00000000       0x78 ./Core/DRIVERS/spi/MySPI.o
+ .text.SPIx_init
+                0x00000000       0x50 ./Core/DRIVERS/spi/MySPI.o
  .text.SPI2_Receive_Transmit
-                0x00000000       0x48 ./Core/DRIVERS/spi/MySPI2.o
+                0x00000000       0x4a ./Core/DRIVERS/spi/MySPI.o
  .text.SPI2_CS_select
-                0x00000000       0x1e ./Core/DRIVERS/spi/MySPI2.o
+                0x00000000       0x1e ./Core/DRIVERS/spi/MySPI.o
  .text.SPI2_CS_deselect
-                0x00000000       0x1e ./Core/DRIVERS/spi/MySPI2.o
- .rodata.pclk.1
-                0x00000000        0x4 ./Core/DRIVERS/spi/MySPI2.o
+                0x00000000       0x1e ./Core/DRIVERS/spi/MySPI.o
  .rodata.psc_table.0
-                0x00000000       0x10 ./Core/DRIVERS/spi/MySPI2.o
- .debug_info    0x00000000      0x70e ./Core/DRIVERS/spi/MySPI2.o
- .debug_abbrev  0x00000000      0x1cf ./Core/DRIVERS/spi/MySPI2.o
+                0x00000000       0x10 ./Core/DRIVERS/spi/MySPI.o
+ .debug_info    0x00000000      0x424 ./Core/DRIVERS/spi/MySPI.o
+ .debug_abbrev  0x00000000      0x1b6 ./Core/DRIVERS/spi/MySPI.o
  .debug_aranges
-                0x00000000       0x48 ./Core/DRIVERS/spi/MySPI2.o
+                0x00000000       0x48 ./Core/DRIVERS/spi/MySPI.o
  .debug_rnglists
-                0x00000000       0x32 ./Core/DRIVERS/spi/MySPI2.o
- .debug_macro   0x00000000      0x1a4 ./Core/DRIVERS/spi/MySPI2.o
- .debug_macro   0x00000000      0xad8 ./Core/DRIVERS/spi/MySPI2.o
- .debug_macro   0x00000000       0x22 ./Core/DRIVERS/spi/MySPI2.o
- .debug_macro   0x00000000       0x8e ./Core/DRIVERS/spi/MySPI2.o
- .debug_macro   0x00000000       0x51 ./Core/DRIVERS/spi/MySPI2.o
- .debug_macro   0x00000000      0x103 ./Core/DRIVERS/spi/MySPI2.o
- .debug_macro   0x00000000       0x6a ./Core/DRIVERS/spi/MySPI2.o
- .debug_macro   0x00000000      0x1df ./Core/DRIVERS/spi/MySPI2.o
- .debug_macro   0x00000000       0x28 ./Core/DRIVERS/spi/MySPI2.o
- .debug_macro   0x00000000       0x1c ./Core/DRIVERS/spi/MySPI2.o
- .debug_macro   0x00000000       0x22 ./Core/DRIVERS/spi/MySPI2.o
- .debug_macro   0x00000000       0xfb ./Core/DRIVERS/spi/MySPI2.o
- .debug_macro   0x00000000     0x1011 ./Core/DRIVERS/spi/MySPI2.o
- .debug_macro   0x00000000      0x11f ./Core/DRIVERS/spi/MySPI2.o
- .debug_macro   0x00000000    0x16749 ./Core/DRIVERS/spi/MySPI2.o
- .debug_macro   0x00000000       0x2a ./Core/DRIVERS/spi/MySPI2.o
- .debug_macro   0x00000000       0x61 ./Core/DRIVERS/spi/MySPI2.o
- .debug_macro   0x00000000       0x43 ./Core/DRIVERS/spi/MySPI2.o
- .debug_macro   0x00000000       0x34 ./Core/DRIVERS/spi/MySPI2.o
- .debug_macro   0x00000000       0x16 ./Core/DRIVERS/spi/MySPI2.o
- .debug_macro   0x00000000      0x11c ./Core/DRIVERS/spi/MySPI2.o
- .debug_macro   0x00000000       0x9b ./Core/DRIVERS/spi/MySPI2.o
- .debug_macro   0x00000000      0x370 ./Core/DRIVERS/spi/MySPI2.o
- .debug_macro   0x00000000       0x16 ./Core/DRIVERS/spi/MySPI2.o
- .debug_macro   0x00000000       0x4a ./Core/DRIVERS/spi/MySPI2.o
- .debug_macro   0x00000000       0x34 ./Core/DRIVERS/spi/MySPI2.o
- .debug_macro   0x00000000       0x10 ./Core/DRIVERS/spi/MySPI2.o
- .debug_macro   0x00000000       0x58 ./Core/DRIVERS/spi/MySPI2.o
- .debug_macro   0x00000000       0x8e ./Core/DRIVERS/spi/MySPI2.o
- .debug_macro   0x00000000       0x1c ./Core/DRIVERS/spi/MySPI2.o
- .debug_macro   0x00000000      0x185 ./Core/DRIVERS/spi/MySPI2.o
- .debug_macro   0x00000000       0x16 ./Core/DRIVERS/spi/MySPI2.o
- .debug_macro   0x00000000       0x29 ./Core/DRIVERS/spi/MySPI2.o
- .debug_line    0x00000000      0x900 ./Core/DRIVERS/spi/MySPI2.o
- .debug_str     0x00000000    0x8e3b2 ./Core/DRIVERS/spi/MySPI2.o
- .comment       0x00000000       0x44 ./Core/DRIVERS/spi/MySPI2.o
- .debug_frame   0x00000000       0xf4 ./Core/DRIVERS/spi/MySPI2.o
+                0x00000000       0x31 ./Core/DRIVERS/spi/MySPI.o
+ .debug_macro   0x00000000      0x1a4 ./Core/DRIVERS/spi/MySPI.o
+ .debug_macro   0x00000000      0xad8 ./Core/DRIVERS/spi/MySPI.o
+ .debug_macro   0x00000000       0x22 ./Core/DRIVERS/spi/MySPI.o
+ .debug_macro   0x00000000       0x8e ./Core/DRIVERS/spi/MySPI.o
+ .debug_macro   0x00000000       0x51 ./Core/DRIVERS/spi/MySPI.o
+ .debug_macro   0x00000000      0x103 ./Core/DRIVERS/spi/MySPI.o
+ .debug_macro   0x00000000       0x6a ./Core/DRIVERS/spi/MySPI.o
+ .debug_macro   0x00000000      0x1df ./Core/DRIVERS/spi/MySPI.o
+ .debug_macro   0x00000000       0x28 ./Core/DRIVERS/spi/MySPI.o
+ .debug_macro   0x00000000       0x1c ./Core/DRIVERS/spi/MySPI.o
+ .debug_macro   0x00000000       0x22 ./Core/DRIVERS/spi/MySPI.o
+ .debug_macro   0x00000000       0xfb ./Core/DRIVERS/spi/MySPI.o
+ .debug_macro   0x00000000     0x1011 ./Core/DRIVERS/spi/MySPI.o
+ .debug_macro   0x00000000      0x11f ./Core/DRIVERS/spi/MySPI.o
+ .debug_macro   0x00000000    0x16749 ./Core/DRIVERS/spi/MySPI.o
+ .debug_macro   0x00000000       0x2a ./Core/DRIVERS/spi/MySPI.o
+ .debug_macro   0x00000000       0x61 ./Core/DRIVERS/spi/MySPI.o
+ .debug_macro   0x00000000       0x43 ./Core/DRIVERS/spi/MySPI.o
+ .debug_macro   0x00000000       0x34 ./Core/DRIVERS/spi/MySPI.o
+ .debug_macro   0x00000000       0x16 ./Core/DRIVERS/spi/MySPI.o
+ .debug_macro   0x00000000      0x11c ./Core/DRIVERS/spi/MySPI.o
+ .debug_macro   0x00000000       0x9b ./Core/DRIVERS/spi/MySPI.o
+ .debug_macro   0x00000000      0x370 ./Core/DRIVERS/spi/MySPI.o
+ .debug_macro   0x00000000       0x16 ./Core/DRIVERS/spi/MySPI.o
+ .debug_macro   0x00000000       0x4a ./Core/DRIVERS/spi/MySPI.o
+ .debug_macro   0x00000000       0x34 ./Core/DRIVERS/spi/MySPI.o
+ .debug_macro   0x00000000       0x10 ./Core/DRIVERS/spi/MySPI.o
+ .debug_macro   0x00000000       0x58 ./Core/DRIVERS/spi/MySPI.o
+ .debug_macro   0x00000000       0x8e ./Core/DRIVERS/spi/MySPI.o
+ .debug_macro   0x00000000       0x1c ./Core/DRIVERS/spi/MySPI.o
+ .debug_macro   0x00000000      0x185 ./Core/DRIVERS/spi/MySPI.o
+ .debug_macro   0x00000000       0x16 ./Core/DRIVERS/spi/MySPI.o
+ .debug_macro   0x00000000       0x29 ./Core/DRIVERS/spi/MySPI.o
+ .debug_line    0x00000000      0x8c3 ./Core/DRIVERS/spi/MySPI.o
+ .debug_str     0x00000000    0x8e107 ./Core/DRIVERS/spi/MySPI.o
+ .comment       0x00000000       0x44 ./Core/DRIVERS/spi/MySPI.o
+ .debug_frame   0x00000000       0xf4 ./Core/DRIVERS/spi/MySPI.o
  .ARM.attributes
-                0x00000000       0x34 ./Core/DRIVERS/spi/MySPI2.o
+                0x00000000       0x34 ./Core/DRIVERS/spi/MySPI.o
  .group         0x00000000        0xc ./Core/DRIVERS/usart/MyUsart.o
  .group         0x00000000        0xc ./Core/DRIVERS/usart/MyUsart.o
  .group         0x00000000        0xc ./Core/DRIVERS/usart/MyUsart.o
@@ -2844,7 +2842,7 @@ LOAD ./Core/DRIVERS/dma/MyDMA.o
 LOAD ./Core/DRIVERS/gpio/gpiox.o
 LOAD ./Core/DRIVERS/hcsr04/MyHcsr04.o
 LOAD ./Core/DRIVERS/i2c/MyI2C.o
-LOAD ./Core/DRIVERS/spi/MySPI2.o
+LOAD ./Core/DRIVERS/spi/MySPI.o
 LOAD ./Core/DRIVERS/usart/MyUsart.o
 LOAD ./Core/DRIVERS/usart/RingBuffer.o
 LOAD ./Core/Src/main.o

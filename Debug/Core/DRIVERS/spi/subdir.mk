@@ -5,13 +5,13 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
-../Core/DRIVERS/spi/MySPI2.c 
+../Core/DRIVERS/spi/MySPI.c 
 
 OBJS += \
-./Core/DRIVERS/spi/MySPI2.o 
+./Core/DRIVERS/spi/MySPI.o 
 
 C_DEPS += \
-./Core/DRIVERS/spi/MySPI2.d 
+./Core/DRIVERS/spi/MySPI.d 
 
 
 # Each subdirectory must supply rules for building sources it contributes
@@ -21,7 +21,7 @@ Core/DRIVERS/spi/%.o Core/DRIVERS/spi/%.su Core/DRIVERS/spi/%.cyclo: ../Core/DRI
 clean: clean-Core-2f-DRIVERS-2f-spi
 
 clean-Core-2f-DRIVERS-2f-spi:
-	-$(RM) ./Core/DRIVERS/spi/MySPI2.cyclo ./Core/DRIVERS/spi/MySPI2.d ./Core/DRIVERS/spi/MySPI2.o ./Core/DRIVERS/spi/MySPI2.su
+	-$(RM) ./Core/DRIVERS/spi/MySPI.cyclo ./Core/DRIVERS/spi/MySPI.d ./Core/DRIVERS/spi/MySPI.o ./Core/DRIVERS/spi/MySPI.su
 
 .PHONY: clean-Core-2f-DRIVERS-2f-spi
 

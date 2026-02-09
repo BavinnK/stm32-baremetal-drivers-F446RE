@@ -1,6 +1,8 @@
 ../Core/DRIVERS/spi/MySPI.c:3:20:set_format	3
-../Core/DRIVERS/spi/MySPI.c:13:24:set_freq	3
-../Core/DRIVERS/spi/MySPI.c:103:6:SPIx_init	1
-../Core/DRIVERS/spi/MySPI.c:113:9:SPI2_Receive_Transmit	3
-../Core/DRIVERS/spi/MySPI.c:119:6:SPI2_CS_select	1
-../Core/DRIVERS/spi/MySPI.c:122:6:SPI2_CS_deselect	1
+../Core/DRIVERS/spi/MySPI.c:12:24:get_spi_freq	2
+../Core/DRIVERS/spi/MySPI.c:20:24:set_freq	4
+../Core/DRIVERS/spi/MySPI.c:36:20:SPI_set	3
+../Core/DRIVERS/spi/MySPI.c:111:6:SPIx_init	1
+../Core/DRIVERS/spi/MySPI.c:122:9:SPIx_Receive_Transmit	3
+../Core/DRIVERS/spi/MySPI.c:128:6:SPIx_CS_select	1
+../Core/DRIVERS/spi/MySPI.c:131:6:SPIx_CS_deselect	1

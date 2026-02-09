@@ -1,22 +1,30 @@
 #include <MySPI.h>
 
-static inline void set_format(spi_frame_format format){
+static inline void set_format(SPI_TypeDef *spi,spi_frame_format format){
 	if(format==MSB){
-		SPI2->CR1&=~(1<<7);
+		spi->CR1&=~(1<<7);
 	}
 	else if(format==LSB){
-		SPI2->CR1|=(1<<7);
+		spi->CR1|=(1<<7);
 	}
 }
 
-
-static inline uint32_t set_freq(uint32_t freq){
+static inline uint32_t get_spi_freq(SPI_TypeDef *spi,uint32_t freq){
+	if(spi==SPI1){
+		return 90000000;
+	}
+	else{
+		return 45000000;
+	}
+}
+static inline uint32_t set_freq(SPI_TypeDef *spi,uint32_t freq){
 	static const uint16_t psc_table[8]={2,4,8,16,32,64,128,256};
-	uint32_t pclk=SystemCoreClock;//prepherial clock of APB1 bus is 42Mhz rightnow, depending on u freq bus u have to change this variable
+
+	uint32_t pclk=get_spi_freq(spi, freq);//the user needs to change the freq of both APB1 BUS AND APB2 BUS depending on the cpu speed, mine is 180Mhz
 	uint32_t closest=0,baud_value=0,best_PSC=0,best_closest=0xFFFFFFFF;
 	for(int i=0;i<=7;i++){
 		baud_value=pclk/psc_table[i];
-		closest=abs(baud_value-freq);
+		closest = (baud_value > freq)?(baud_value - freq):(freq - baud_value);
 		if(closest<=best_closest){
 			best_closest=closest;
 			best_PSC=i;
@@ -97,28 +105,29 @@ static inline void SPI_set(SPI_TypeDef *spi,GPIO_TypeDef *port,uint8_t CS,uint32
 		GPIOC->AFR[0]|=((5<<4*1)|(5<<4*2));
 		GPIOB->AFR[1]|=(5<<4*(10-8));
 
-		RCC->APB1ENR|=(1<<14);//SPI2 CLK EN
+		RCC->APB1ENR|=(1<<14);//SPIx CLK EN
 	}
 }
 void SPIx_init(SPI_TypeDef *spi,GPIO_TypeDef *port,uint8_t CS,uint32_t frequency_Mhz,spi_frame_format format){
 
-
-	spi->CR1&=~((1<<6)|(0b111<<3)|(1<<1));//DISABLE SPI2 FIRST,and clear baud control bits, and then set the clock polarity to low
-	set_format(format);
-	spi->CR1|=(set_freq(frequency_Mhz)<<3)|(1<<2)|(1<<0);//set the spi to master, then set the freq that was provided by the user
+	SPI_set(spi, port, CS, frequency_Mhz, format);
+	spi->CR1&=~((1<<6)|(0b111<<3)|(1<<1));//DISABLE SPIx FIRST,and clear baud control bits, and then set the clock polarity to low
+	set_format(spi,format);
+	spi->CR1|=(set_freq(spi,frequency_Mhz)<<3)|(1<<2)|(1<<0);//set the spi to master, then set the freq that was provided by the user
 	//then set the clock phase so in the second edge the transmission of data beginst the first edge is just a hand shake with the slave device
 	spi->CR1|=(3<<8)|(1<<6);//we set both SSM AND SSI to one, basicallly we tell the spi hey i wanna handle the chip select dont worry, then enable the prepherial
-
+	spi->CR1&=~(1<<11);//clear DFF bit to set it to 8 bit format
+	spi->CR1|=(1<<2);//set master config
 }
-uint8_t SPI2_Receive_Transmit(SPI_TypeDef *spi,GPIO_TypeDef *port,uint8_t CS,uint8_t data){
+uint8_t SPIx_Receive_Transmit(SPI_TypeDef *spi,GPIO_TypeDef *port,uint8_t CS,uint8_t data){
 	while(!(spi->SR&(1<<1)));//WAIT UNTIL THE TRANSMIT BUFFER IS EMPTY, afterwards send the data
 	spi->DR=data;
 	while(!(spi->SR&(1<<0)));//WAIT UNTIL THE RECEIVE BUFFER IS NOT EMPTY, afterwards GET the data
 	return spi->DR;
 }
-void SPI2_CS_select(GPIO_TypeDef *port,uint8_t CS){
+void SPIx_CS_select(GPIO_TypeDef *port,uint8_t CS){
 	gpio_reset(port, CS);//low
 }
-void SPI2_CS_deselect(GPIO_TypeDef *port,uint8_t CS){
+void SPIx_CS_deselect(GPIO_TypeDef *port,uint8_t CS){
 	gpio_set(port, CS);//high
 }
